@@ -20,7 +20,7 @@
     importButton.style.zIndex = '1000';
     importButton.style.padding = '10px';
     importButton.style.fontSize = '1em';
-    importButton.style.backgroundColor = '#1DB954';
+    importButton.style.backgroundColor = '#FF9400';
     importButton.style.color = 'white';
     importButton.style.border = 'none';
     importButton.style.borderRadius = '5px';
@@ -30,10 +30,35 @@
     importButton.onclick = function() {
         const currentPage = window.location.href;
         const spotID = currentPage.replace(/^(https\:\/\/open\.spotify\.com\/album\/)+/, '');
-        const newURL = "https://atisket.pulsewidth.org.uk/?spf_id=" + spotID;
+        const newURL = "https://atisket.pulsewidth.org.uk/?preferred_vendor=spf&spf_id=" + spotID;
         window.open(newURL, '_blank').focus();
     };
 
     // Append the button to the body of the page
     document.body.appendChild(importButton);
+
+    // Create a button to import to a-tisket
+    const searchButton = document.createElement('button');
+    searchButton.textContent = 'Search on listenbrainz';
+    searchButton.style.position = 'fixed';
+    searchButton.style.bottom = '70px';
+    searchButton.style.right = '20px';
+    searchButton.style.zIndex = '1000';
+    searchButton.style.padding = '10px';
+    searchButton.style.fontSize = '1em';
+    searchButton.style.backgroundColor = '#BA478F';
+    searchButton.style.color = 'white';
+    searchButton.style.border = 'none';
+    searchButton.style.borderRadius = '5px';
+    searchButton.style.cursor = 'pointer';
+
+        // Function to open the a-tisket import page with the current Spotify album's ID
+    searchButton.onclick = function() {
+        const currentPage = window.location.href;
+        const newURL = "https://musicbrainz.org/otherlookup/url?other-lookup.url=" + currentPage;
+        window.open(newURL, '_blank').focus();
+    };
+
+    // Append the button to the body of the page
+    document.body.appendChild(searchButton);
 })();
