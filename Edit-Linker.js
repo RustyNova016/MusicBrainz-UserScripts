@@ -7,8 +7,8 @@
 // @match        *://*.musicbrainz.org/recording/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
-// @downloadURL https://raw.githubusercontent.com/RustyNova016/MusicBrainz-UserScripts/main/spotify-musicbrainz-import.js
-// @updateURL   https://raw.githubusercontent.com/RustyNova016/MusicBrainz-UserScripts/main/spotify-musicbrainz-import.js
+// @downloadURL https://raw.githubusercontent.com/RustyNova016/MusicBrainz-UserScripts/main/Edit-Linker.js
+// @updateURL   https://raw.githubusercontent.com/RustyNova016/MusicBrainz-UserScripts/main/Edit-Linker.js
 // @homepageURL https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @supportURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @grant        none
