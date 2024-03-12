@@ -4,8 +4,8 @@
 // @version     2024.02.04
 // @author      garylaski, RustyNova
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
-// @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.js
-// @updateURL   hhttps://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.js
+// @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
+// @updateURL   hhttps://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
 // @homepageURL https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @supportURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @match       https://open.spotify.com/*
