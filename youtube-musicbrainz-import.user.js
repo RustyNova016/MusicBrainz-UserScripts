@@ -6,7 +6,7 @@
 // @require https://raw.github.com/murdos/musicbrainz-userscripts/master/lib/mbimport.js
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/youtube-musicbrainz-import.user.js
-// @updateURL   hhttps://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/youtube-musicbrainz-import.user.js
+// @updateURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/youtube-musicbrainz-import.user.js
 // @homepageURL https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @supportURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @include     *://www.youtube.com/watch?*
