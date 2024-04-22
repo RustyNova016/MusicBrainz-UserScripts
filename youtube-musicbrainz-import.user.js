@@ -79,7 +79,7 @@ function yt_callback(req) {
     add_field("type", "single");
     add_field("urls.0.url", document.location.href);
     add_field("urls.0.link_type", "85");
-    add_field("edit_note", document.location.href);
+    add_field("edit_note", document.location.href + "\n--- \nImported with https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/youtube-musicbrainz-import.user.js");
 
 	var mb_ws_url = "https://musicbrainz.org/ws/2/url?limit=1&fmt=json&inc=artist-rels+label-rels+release-rels&resource=http://www.youtube.com/watch%3Fv=" + video_id;
 	var xmlhttp2 = new XMLHttpRequest();
