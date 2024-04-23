@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        MusicBrainz: Import videos from YouTube as release
-// @version     2024-04-23
+// @version     2024-04-23.2
 // @author      Freso - RustyNova
 // @namespace   df069240-fe79-11dc-95ff-0800200c9a66
 // @require https://raw.github.com/murdos/musicbrainz-userscripts/master/lib/mbimport.js
@@ -204,7 +204,7 @@ function reset_state() {
 
     mysubmit = document.createElement("button");
     mysubmit.type = "submit";
-    mysubmit.value = "Add to MusicBrainz";
+    mysubmit.innerText = "Add to MusicBrainz";
     mysubmit.setAttribute("class", "search-button");
     myform.appendChild(mysubmit);
     myform.setAttribute("class", "holder");
