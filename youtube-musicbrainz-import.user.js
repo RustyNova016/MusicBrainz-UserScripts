@@ -66,7 +66,7 @@ function yt_callback(req) {
     add_field("urls.0.link_type", "85");
     add_field("edit_note", document.location.href + "\n --- \nImported with https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/youtube-musicbrainz-import.user.js");
 
-    var mb_ws_url = "https://musicbrainz.org/ws/2/url?limit=1&fmt=json&inc=artist-rels+label-rels+release-rels&resource=" + encodeURI("https://www.youtube.com/watch?v=" + video_id);
+    var mb_ws_url = "https://musicbrainz.org/ws/2/url?limit=1&fmt=json&inc=release-rels&resource=" + encodeURI("https://www.youtube.com/watch?v=" + video_id);
     var xmlhttp2 = new XMLHttpRequest();
     xmlhttp2.open('GET', mb_ws_url, true);
     xmlhttp2.onreadystatechange = function() { mb_callback(xmlhttp2); }
