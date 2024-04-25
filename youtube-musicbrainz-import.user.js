@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        MusicBrainz: Import videos from YouTube as release
-// @version     2024-04-23.2
+// @version     2024-04-25.1
 // @author      Freso - RustyNova
 // @namespace   df069240-fe79-11dc-95ff-0800200c9a66
 // @require https://raw.github.com/murdos/musicbrainz-userscripts/master/lib/mbimport.js
@@ -66,7 +66,7 @@ function yt_callback(req) {
     add_field("urls.0.link_type", "85");
     add_field("edit_note", document.location.href + "\n --- \nImported with https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/youtube-musicbrainz-import.user.js");
 
-    var mb_ws_url = "https://musicbrainz.org/ws/2/url?limit=1&fmt=json&inc=artist-rels+label-rels+release-rels&resource=" + encodeURI("https://www.youtube.com/watch?v=" + video_id);
+    var mb_ws_url = "https://musicbrainz.org/ws/2/url?limit=1&fmt=json&inc=release-rels&resource=" + encodeURI("https://www.youtube.com/watch?v=" + video_id);
     var xmlhttp2 = new XMLHttpRequest();
     xmlhttp2.open('GET', mb_ws_url, true);
     xmlhttp2.onreadystatechange = function() { mb_callback(xmlhttp2); }
@@ -79,7 +79,7 @@ function mb_callback(req) {
     }
     var r = eval('(' + req.responseText + ')');
 
-    if (r.relations) {
+    if (r.relations.length > 0) {
         div.innerHTML = "<div class='holder'><a style='text-decoration: none' href='//musicbrainz.org/url/" + r.id + "'><button style='background-color:#a4a4a4;' class='search-button'>Added ✓</button></a></div>";
     } else {
         mysubmit.style.backgroundColor = '#BA478F';
