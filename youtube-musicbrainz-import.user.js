@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        MusicBrainz: Import videos from YouTube as release
-// @version     2024-04-25.1
+// @version     2024-04-29.1
 // @author      Freso - RustyNova
 // @namespace   df069240-fe79-11dc-95ff-0800200c9a66
 // @require https://raw.github.com/murdos/musicbrainz-userscripts/master/lib/mbimport.js
@@ -79,7 +79,7 @@ function mb_callback(req) {
     }
     var r = eval('(' + req.responseText + ')');
 
-    if (r.relations.length > 0) {
+    if (r.relations !== undefined && r.relations.length > 0) {
         div.innerHTML = "<div class='holder'><a style='text-decoration: none' href='//musicbrainz.org/url/" + r.id + "'><button style='background-color:#a4a4a4;' class='search-button'>Added ✓</button></a></div>";
     } else {
         mysubmit.style.backgroundColor = '#BA478F';
