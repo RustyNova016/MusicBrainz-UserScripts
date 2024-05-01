@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Spotify: MusicBrainz import
 // @description Import Spotify releases into MusicBrainz. fork of https://github.com/garylaski/userscripts/
-// @version     2024.02.04
+// @version     2024.05.01.1
 // @author      garylaski, RustyNova
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
@@ -49,6 +49,13 @@
         head.appendChild(style);
     }
 };
+
+// --- Spotify settings ----
+
+// The class of the element that the buttons should anchor on. This changes each time spotify refresh their CSS, so needs to be updated
+let anchor_class = ".yLmA5f7x65en2MdKbIhX";
+
+// --- Code ----
 
 let globalPromises = []
 let form, entity, formString;
@@ -224,7 +231,7 @@ function determineEntityType() {
     }
 
     entity = {
-        buttonSelector: ".vveb4Rn0dK_r8YUM7L_n",
+        buttonSelector: anchor_class,
         build: buildTrack,
     }
     return true;
