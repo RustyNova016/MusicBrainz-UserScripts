@@ -10,6 +10,7 @@
 // @homepageURL https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @supportURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @include     *://www.youtube.com/watch?*
+// @icon        https://www.youtube.com/s/desktop/7c0eb0c2/img/favicon_144x144.png
 // @run-at      document-end
 // @grant       GM.xmlHttpRequest
 //
