@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Spotify: MusicBrainz Status
-// @version      2024-05-04
+// @version      2024-05-04.1
 // @description  try to take over the world!
 // @author       RustyNova
 // @match        https://open.spotify.com/*
