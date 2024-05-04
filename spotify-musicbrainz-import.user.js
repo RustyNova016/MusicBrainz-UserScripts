@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Spotify: MusicBrainz import
 // @description Import Spotify releases into MusicBrainz. fork of https://github.com/garylaski/userscripts/
-// @version     2024.05.01.1
+// @version     2024.05.04.1
 // @author      garylaski, RustyNova
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
@@ -9,6 +9,7 @@
 // @homepageURL https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @supportURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @match       https://open.spotify.com/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=spotify.com
 // @licence     GPL-3.0-or-later; http://www.gnu.org/licenses/gpl-3.0.txt
 // @run-at      document-end
 // @grant       GM.xmlHttpRequest
