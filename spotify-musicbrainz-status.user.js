@@ -70,6 +70,9 @@ async function handle_album_card(card_root) {
     const regex = new RegExp('https:\/\/open\.spotify\.com\/album\/.*');
 
     if (!regex.test(link)) {return}
+    let original_image_area_root = get_card_image_area(card_root);
+    original_image_area_root.classList.add("loading-album-image");
+
 
     console.log(link);
 
@@ -85,11 +88,6 @@ async function handle_album_card(card_root) {
 }
 
 // Handle the statust icon for a specific album
-// <Card>
-//     <Title>
-//     <Img>
-//     <Wrapper>
-///
 function handle_status_icon(id, in_musicbrainz, anchor_element, card_root) {
     let original_image_area_root = get_card_image_area(card_root);
 
@@ -124,6 +122,7 @@ function handle_status_icon(id, in_musicbrainz, anchor_element, card_root) {
         //icon_align.appendChild(status_icon_img);
     }
 
+    original_image_area_root.classList.remove("loading-album-image");
     if (in_musicbrainz) {
         status_icon_img.style.display = 'block'
 
@@ -141,23 +140,33 @@ let cached, targetType, mbid;
 async function UrlInMusicBrainz(url) {
     cached = urlCache.get(url);
     if (cached === undefined) {
-        // Request throttling
-        await sleep(1000);
+        while (true) {
+            let tries = 0;
+            // Request throttling
+            await sleep(1000 * tries);
 
-        let response = await GM.xmlHttpRequest({
-            url: "https://musicbrainz.org/ws/2/url?limit=1&inc=artist-rels+label-rels+release-rels&fmt=json&resource="+url,
-            method: "GET",
-            responseType: "json"
-        });
+            let response = await GM.xmlHttpRequest({
+                url: "https://musicbrainz.org/ws/2/url?limit=1&inc=artist-rels+label-rels+release-rels&fmt=json&resource="+url,
+                method: "GET",
+                responseType: "json"
+            });
 
-        if (!response.response.error && response.response.relations.length > 0) {
-            targetType = response.response.relations[0]["target-type"];
-            mbid = response.response.relations[0][targetType]["id"];
-            urlCache.set(url, [targetType, mbid])
-            return [targetType, mbid]
-        } else {
-            urlCache.set(url, null)
-            return null
+            if (!response.response.error && response.response.relations.length > 0) {
+                targetType = response.response.relations[0]["target-type"];
+                mbid = response.response.relations[0][targetType]["id"];
+                urlCache.set(url, [targetType, mbid])
+                return [targetType, mbid]
+            } else {
+                let regex = new RegExp('Your requests are exceeding the allowable rate limit.');
+
+                // If it isn't a ratelimit issue
+                if (!regex.test(response.response.error)) {
+                    urlCache.set(url, null)
+                    return null
+                } else {
+                    tries += 1;
+                }
+            }
         }
     } else {
         return cached;
@@ -177,8 +186,14 @@ function main() {
 
              .unlinked-album-image {
                   border: red solid;
-  border-width: 4px 0px;
-  border-radius: 5px;
+                  border-width: 4px 0px;
+                  border-radius: 5px;
+             }
+
+             .loading-album-image {
+                  border: orange solid;
+                  border-width: 4px 0px;
+                  border-radius: 5px;
              }
 
              .mb_wrapper {
