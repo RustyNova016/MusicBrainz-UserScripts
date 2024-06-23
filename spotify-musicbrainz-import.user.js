@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name        Spotify: MusicBrainz import
 // @description Import Spotify releases into MusicBrainz. fork of https://github.com/garylaski/userscripts/
-// @version     2024.05.04.1
+// @version     2024.06.23.1
 // @author      garylaski, RustyNova
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
-// @updateURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
+// @updateURL   hhttps://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
 // @homepageURL https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @supportURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @match       https://open.spotify.com/*
@@ -40,6 +40,10 @@
 
         .import-button-atisket {
             background-color: #FF9400;
+        }
+
+        .import-button-harmony {
+            background-color: #c45555;
         }
 
         .import-button:before {
@@ -85,6 +89,7 @@ async function onUrlChange() {
     form = document.createElement("form");
 
     globalPromises.push(create_atisket_button());
+    globalPromises.push(create_harmony_button());
     globalPromises.push(create_lookup_button());
 
     let value = await UrlInMusicBrainz(location.href);
@@ -152,6 +157,32 @@ function create_atisket_button() {
         waitForElement(entity.buttonSelector).then(element => {
             console.log("Spotify: MusicBrainz import: Inserting atisket button");
             element.parentElement.insertBefore(atisket_button, element);
+            resolve();
+        });
+    });
+}
+
+let harmony_button;
+function create_harmony_button() {
+    return new Promise(resolve => {
+        if (harmony_button != null) {
+            harmony_button.remove();
+        }
+
+        harmony_button = document.createElement("button");
+        harmony_button.innerHTML = "Import with harmony";
+        harmony_button.setAttribute("class", "import-button import-button-harmony sc-button-mb sc-button-secondary sc-button sc-button-medium sc-button-block sc-button-responsive");
+
+        harmony_button.onclick = function() {
+            const currentPage = window.location.href;
+            const newURL = "https://harmony.pulsewidth.org.uk/release?gtin=&region=&deezer=&itunes=&spotify=&tidal=&url=" + currentPage;
+            window.open(newURL, '_blank').focus();
+        };
+
+        console.log("Spotify: MusicBrainz import: Waiting for element:", entity.buttonSelector);
+        waitForElement(entity.buttonSelector).then(element => {
+            console.log("Spotify: MusicBrainz import: Inserting atiharmonysket button");
+            element.parentElement.insertBefore(harmony_button, element);
             resolve();
         });
     });
