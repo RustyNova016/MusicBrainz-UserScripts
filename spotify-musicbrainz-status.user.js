@@ -6,7 +6,7 @@
 // @match        https://open.spotify.com/*
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-status.user.js
-// @updateURL   hhttps://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-status.user.js
+// @updateURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-status.user.js
 // @homepageURL https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @supportURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=spotify.com
