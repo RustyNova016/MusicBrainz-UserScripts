@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Spotify: MusicBrainz Status
-// @version      2024-05-05.1
+// @version      2024-08-01.1
 // @description  try to take over the world!
 // @author       RustyNova
 // @match        https://open.spotify.com/*
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-status.user.js
-// @updateURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-status.user.js
+// @updateURL   hhttps://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-status.user.js
 // @homepageURL https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @supportURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=spotify.com
@@ -22,6 +22,9 @@ let schedule_update = false;
 let globalPromises = []
 let form, entity, formString;
 let previousAlbumCount = 0;
+
+// Spotify integration variables
+let card_root_class_name = "fEmPRB"; // Change every CSS refresh.
 
 new MutationObserver(function(mutations) {
     // Prevent running if there's already an update in progress
@@ -48,9 +51,9 @@ function on_mutation() {
 
 // Get all the albm cards
 async function get_all_albums() {
-    let all_cards = document.getElementsByClassName("fqjnfn");
+    let all_cards = document.getElementsByClassName(card_root_class_name);
 
-    console.log(all_cards.length)
+    console.log("[MB Status] Album card count: " + all_cards.length)
     if (all_cards.length === previousAlbumCount) {return}
     previousAlbumCount = all_cards.length
     if (all_cards.length === 0) {return}
@@ -74,12 +77,12 @@ async function handle_album_card(card_root) {
     original_image_area_root.classList.add("loading-album-image");
 
 
-    console.log(link);
+    console.log("link:" + link);
 
     // Now that we have a link, we ask musicbrainz if it exist in the DB
     let exist = await UrlInMusicBrainz(link);
 
-    console.log(exist);
+    console.log("Exist in MB: " + exist);
     // And we set the status
     console.log(`Status update for ${link}`, exist )
 
