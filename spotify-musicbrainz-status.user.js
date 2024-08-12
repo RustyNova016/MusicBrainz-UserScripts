@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Spotify: MusicBrainz Status
-// @version      2024-08-01.1
+// @version      2024-08-12.1
 // @description  try to take over the world!
 // @author       RustyNova
 // @match        https://open.spotify.com/*
@@ -24,7 +24,7 @@ let form, entity, formString;
 let previousAlbumCount = 0;
 
 // Spotify integration variables
-let card_root_class_name = "fEmPRB"; // Change every CSS refresh.
+let card_root_class_name = "bEHVkp"; // Change every CSS refresh.
 
 new MutationObserver(function(mutations) {
     // Prevent running if there's already an update in progress
@@ -52,6 +52,11 @@ function on_mutation() {
 // Get all the albm cards
 async function get_all_albums() {
     let all_cards = document.getElementsByClassName(card_root_class_name);
+
+    if (all_cards.length === 0) {
+        console.log("[MB Status] No Album cards found. If you expect some, the CSS might have changed. Check card_root_class_name");
+        return
+    }
 
     console.log("[MB Status] Album card count: " + all_cards.length)
     if (all_cards.length === previousAlbumCount) {return}
