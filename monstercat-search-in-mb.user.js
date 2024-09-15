@@ -7,7 +7,7 @@
 // @supportURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @version      2024-09-15.1
 // @description  Add a search button to Monstercat's Release Pages
-// @author       You
+// @author       RustyNova
 // @match        https://www.monstercat.com/release/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=monstercat.com
 // @grant        none
