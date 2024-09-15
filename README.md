@@ -13,3 +13,9 @@ This userscript add a border arround all the album cards when it cannot find the
 ️⚠️ This doesn't mean the release isn't in MB. It only means the release doesn't have a spotify URL attached to it ⚠️
 
 ![image](https://github.com/RustyNova016/MusicBrainz-UserScripts/assets/50844553/e8d68bb0-7bed-44f3-a737-f6132de62088)
+
+# Monstercat
+## Search
+Adds two buttons to search a monstercat release in Musicbrainz and Spotify.
+
+![image](https://github.com/user-attachments/assets/9c35b3e0-84ec-4ef3-aaa1-a3860c1728b8)
