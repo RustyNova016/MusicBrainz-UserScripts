@@ -205,7 +205,7 @@ function reset_state() {
 
     mysubmit = document.createElement("button");
     mysubmit.type = "submit";
-    mysubmit.innerText = "Add to MusicBrainz";
+    mysubmit.innerText = "Add to MusicBrainz as release";
     mysubmit.setAttribute("class", "search-button");
     myform.appendChild(mysubmit);
     myform.setAttribute("class", "holder");
