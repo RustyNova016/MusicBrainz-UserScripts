@@ -25,3 +25,9 @@ This userscript add a border arround all the album cards when it cannot find the
 Adds two buttons to search a monstercat release in Musicbrainz and Spotify.
 
 ![image](https://github.com/user-attachments/assets/9c35b3e0-84ec-4ef3-aaa1-a3860c1728b8)
+
+# Youtube
+## Import as release
+Import youtube videos as releases easily
+
+![image](https://github.com/user-attachments/assets/a01b88bc-a29d-4150-a7cf-8ccea6e2ae1c)
