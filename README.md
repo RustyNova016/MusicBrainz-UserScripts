@@ -2,6 +2,12 @@
 
 Here's a bunch of userscripts I made/forked. Feel free to use them!
 
+# Listenbrainz
+## Search missing data
+Adds a bunch of links to quickly search your missing data online
+
+![image](https://github.com/user-attachments/assets/872dc63f-875e-4275-a975-84c491b2c9fe)
+
 # Spotify:
 ## Import
 This userscript adds two buttons on the album pages to search the release in Musicbrainz/Open it if the URL is present, or a button to go directly to Atisket / Harmony
