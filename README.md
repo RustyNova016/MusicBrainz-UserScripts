@@ -6,7 +6,8 @@ Here's a bunch of userscripts I made/forked. Feel free to use them!
 ## Search missing data
 Adds a bunch of links to quickly search your missing data online
 
-![image](https://github.com/user-attachments/assets/872dc63f-875e-4275-a975-84c491b2c9fe)
+![image](https://github.com/user-attachments/assets/5974b992-bc70-4a6e-ac30-d30eca89f9dc)
+
 
 # Spotify:
 ## Import
