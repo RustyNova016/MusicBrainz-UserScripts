@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Search Missing Data
 // @namespace    http://tampermonkey.net/
-// @version      2024-09-20.1
-// @description  Add links to listenbrainz's missing data page
+// @version      2024-09-22.1
+// @description  Add linksto listenbrainz's missing data page
 // @author       You
 // @match        https://listenbrainz.org/settings/missing-data/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=listenbrainz.org
@@ -106,8 +106,10 @@ async function handle_card(card_root) {
     container.setAttribute("class", "search-link-container");
     anchor.prepend(container);
 
+    add_icon(container, `https://listenbrainz.org/search/?search_term=${title} ${artist}&search_type=track`, "listenbrainz");
     add_icon(container, `https://open.spotify.com/search/${title} ${artist}`, "spot");
     add_icon(container, `https://www.deezer.com/search/${title} ${artist}`, "deez");
+    add_icon(container, `https://music.apple.com/gb/search?term=${title} ${artist}`, "apple");
 }
 
 function add_icon(container, link, pref) {
@@ -134,27 +136,30 @@ function main() {
 
         .search-link {
             margin: 0px 5px;
+              background: 0 0 no-repeat;
+    background-image: none;
+    background-size: auto;
+  background-size: 32px;
+  width: 32px;
+  height: 32px;
         }
+
 
 
         .spot-search-icon {
   background-image: url("https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png") !important;
-  background: 0 0 no-repeat;
-    background-image: none;
-    background-size: auto;
-  background-size: 32px;
-  width: 32px;
-  height: 32px;
         }
 
                 .deez-search-icon {
   background-image: url("https://e-cdn-files.dzcdn.net/cache/images/common/favicon/favicon-32x32.ed120c279a693bed3a44.png") !important;
-  background: 0 0 no-repeat;
-    background-image: none;
-    background-size: auto;
-  background-size: 32px;
-  width: 32px;
-  height: 32px;
+        }
+
+        .apple-search-icon {
+  background-image: url("https://www.google.com/s2/favicons?sz=64&domain=music.apple.com") !important;
+        }
+
+        .listenbrainz-search-icon {
+  background-image: url("https://www.google.com/s2/favicons?sz=64&domain=listenbrainz.org") !important;
         }
         `;
         head.appendChild(style);
