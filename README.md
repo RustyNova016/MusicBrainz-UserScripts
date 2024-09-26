@@ -2,6 +2,12 @@
 
 Here's a bunch of userscripts I made/forked. Feel free to use them!
 
+# Beatport
+## MusicBrainz import links
+This userscript adds two buttons on the album pages to search the release in Musicbrainz/Open it if the URL is present, or a button to go directly to Harmony
+
+![image](https://github.com/user-attachments/assets/3e954f7c-4bb6-4bc2-8b84-603031f30ba8)
+
 # Listenbrainz
 ## Search missing data
 Adds a bunch of links to quickly search your missing data online
