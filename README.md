@@ -8,6 +8,11 @@ This userscript adds two buttons on the album pages to search the release in Mus
 
 ![image](https://github.com/user-attachments/assets/3e954f7c-4bb6-4bc2-8b84-603031f30ba8)
 
+## Musicbrainz Releases Status
+Add quick links to easiy open in harmony or musicbrainz on lists of releases
+
+![image](https://github.com/user-attachments/assets/930e3265-026c-4eaf-90fd-cb1661a41239)
+
 # Listenbrainz
 ## Search missing data
 Adds a bunch of links to quickly search your missing data online
