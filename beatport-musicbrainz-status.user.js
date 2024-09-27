@@ -3,7 +3,7 @@
 // @version      2024-09-27.1
 // @description  try to take over the world!
 // @author       RustyNova
-// @match        https://www.beatport.com/label/*/*/releases?page=1&per_page=25
+// @match        https://www.beatport.com/label/*/*/releases
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/beatport-musicbrainz-status.user.js
 // @updateURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/beatport-musicbrainz-status.user.js
