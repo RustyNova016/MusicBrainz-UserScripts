@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Beatport: MusicBrainz import links
 // @description Import Beatport releases into MusicBrainz using ony or jump to the release
-// @version     2024.09.26.1
+// @version     2024.10.14.1
 // @author      RustyNova
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/beatport-musicbrainz-import.user.js
