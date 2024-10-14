@@ -202,7 +202,7 @@ function add_container(anchor) {
 function add_missing_icon(anchor, release_url) {
     let icon = document.createElement("a");
     icon.setAttribute("class", "status-icon harmony-icon");
-    icon.href = "https://harmony.pulsewidth.org.uk/release?gtin=&region=&deezer=&itunes=&spotify=&tidal=&beatport=&url=" + release_url
+    icon.href = "https://harmony.pulsewidth.org.uk/release?gtin=&region=&deezer=&musicbrainz=&itunes=&spotify=&tidal=&beatport=&url=" + release_url
     icon.target="_blank";
     anchor.append(icon);
 }
