@@ -175,7 +175,7 @@ function create_harmony_button() {
 
         harmony_button.onclick = function() {
             const currentPage = window.location.href;
-            const newURL = "https://harmony.pulsewidth.org.uk/release?gtin=&region=&deezer=&itunes=&spotify=&tidal=&url=" + currentPage;
+            const newURL = "https://harmony.pulsewidth.org.uk/release?gtin=&region=&deezer=&musicbrainz=&itunes=&spotify=&tidal=&url=" + currentPage;
             window.open(newURL, '_blank').focus();
         };
 
