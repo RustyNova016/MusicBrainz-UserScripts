@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Beatport: MusicBrainz Status
-// @version      2024-09-27.1
+// @version      2024.10.14.1
 // @description  try to take over the world!
 // @author       RustyNova
 // @match        https://www.beatport.com/label/*/*/releases
