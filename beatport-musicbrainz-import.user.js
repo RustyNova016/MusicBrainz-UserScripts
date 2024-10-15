@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Beatport: MusicBrainz import links
-// @description Import Beatport releases into MusicBrainz using ony or jump to the release
-// @version     2024.10.14.1
+// @description Import Beatport releases into MusicBrainz using harmony or jump to the release
+// @version     2024.10.15.1
 // @author      RustyNova
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/beatport-musicbrainz-import.user.js
@@ -34,7 +34,7 @@ async function onUrlChange() {
     console.log(`Anchor:`, anchor)
     console.log(`Catalog number: ${get_catalog_number(anchor)}`)
 
-    add_ony_import(container)
+    add_harmony_import(container)
 
     let url_in_mb = await search_url_in_musicbrainz(window.location.href)
     if (url_in_mb !== undefined) {
@@ -98,18 +98,18 @@ function add_container(anchor) {
     return container
 }
 
-function add_ony_import(anchor) {
-    let ony_button = document.createElement("button");
-    ony_button.innerHTML = "Import with ony";
-    ony_button.className = "Share-style__Item-sc-2edeb195-3 ijWhIR button_ony enabled"
+function add_harmony_import(anchor) {
+    let harmony_button = document.createElement("button");
+    harmony_button.innerHTML = "Import with harmony";
+    harmony_button.className = "Share-style__Item-sc-2edeb195-3 ijWhIR button_harmony enabled"
 
-    ony_button.onclick = function() {
+    harmony_button.onclick = function() {
             const currentPage = window.location.href;
-            const newURL = "https://ony.pulsewidth.org.uk/release?gtin=&region=&musicbrainz=&deezer=&itunes=&spotify=&tidal=&beatport=&url=" + currentPage;
+            const newURL = "https://harmony.pulsewidth.org.uk/release?gtin=&region=&musicbrainz=&deezer=&itunes=&spotify=&tidal=&beatport=&url=" + currentPage;
             window.open(newURL, '_blank').focus();
     };
 
-    anchor.appendChild(ony_button);
+    anchor.appendChild(harmony_button);
 }
 
 function add_open_button(anchor, type, mbid) {
@@ -192,7 +192,7 @@ function main() {
                  background-color: #BA478F;
                  width: 12.5em
             }
-            .button_ony {
+            .button_harmony {
                  background-color: #c45555;
                  width: 12.5em;
                  margin-right: 15px;
