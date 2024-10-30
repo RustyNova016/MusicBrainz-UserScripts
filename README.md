@@ -38,6 +38,12 @@ Adds two buttons to search a monstercat release in Musicbrainz and Spotify.
 
 ![image](https://github.com/user-attachments/assets/9c35b3e0-84ec-4ef3-aaa1-a3860c1728b8)
 
+# Musicbrainz
+## Go to harmony
+Adds a button to quickly go see a release in harmony. Serves as an ISRC finder too.
+
+![image](https://github.com/user-attachments/assets/6cef2190-774f-433a-811c-4f684a60db7f)
+
 # Youtube
 ## Import as release
 Import youtube videos as releases easily
