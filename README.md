@@ -1,4 +1,4 @@
-# Rustynova's musicbrainz userscript collection
+# RustyNova's musicbrainz userscript collection
 
 Here's a bunch of userscripts I made/forked. Feel free to use them!
 
