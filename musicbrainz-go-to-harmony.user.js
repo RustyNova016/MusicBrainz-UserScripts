@@ -4,6 +4,7 @@
 // @description  Add a quick link to see a release in harmony
 // @author       RustyNova
 // @match        https://musicbrainz.org/release/*
+// @match        https://beta.musicbrainz.org/release/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=musicbrainz.org
 // @namespace    https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/musicbrainz-go-to-harmony.user.js
