@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Musicbrainz: Go to harmony
-// @version      2024-11-19_1
+// @version      2024.11.19.1
 // @description  Add a quick link to see a release in harmony
 // @author       RustyNova
 // @match        https://musicbrainz.org/release/*
