@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Spotify: MusicBrainz Status
-// @version      2024-08-12.1
+// @version      2024.11.19.1
 // @description  try to take over the world!
 // @author       RustyNova
 // @match        https://open.spotify.com/*
@@ -24,7 +24,7 @@ let form, entity, formString;
 let previousAlbumCount = 0;
 
 // Spotify integration variables
-let card_root_class_name = "bEHVkp"; // Change every CSS refresh.
+let card_root_class_name = "kcdDn"; // Change every CSS refresh.
 
 new MutationObserver(function(mutations) {
     // Prevent running if there's already an update in progress
