@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Beatport: MusicBrainz Status
-// @version      2024.10.14.1
+// @version      2024-11-19.1
 // @description  try to take over the world!
 // @author       RustyNova
-// @match        https://www.beatport.com/label/*/*/releases
+// @match        https://www.beatport.com/label/*/*/releases*
+// @match        https://www.beatport.com/artist/*/*/releases*
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/beatport-musicbrainz-status.user.js
 // @updateURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/beatport-musicbrainz-status.user.js
@@ -202,7 +203,7 @@ function add_container(anchor) {
 function add_missing_icon(anchor, release_url) {
     let icon = document.createElement("a");
     icon.setAttribute("class", "status-icon harmony-icon");
-    icon.href = "https://harmony.pulsewidth.org.uk/release?gtin=&region=&deezer=&musicbrainz=&itunes=&spotify=&tidal=&beatport=&url=" + release_url
+    icon.href = "https://harmony.pulsewidth.org.uk/release?gtin=category=preferred&url=" + release_url
     icon.target="_blank";
     anchor.append(icon);
 }
