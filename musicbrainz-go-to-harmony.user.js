@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Musicbrainz: Go to harmony
-// @version      2024-11-04.1
+// @version      2024-11-19_1
 // @description  Add a quick link to see a release in harmony
 // @author       RustyNova
 // @match        https://musicbrainz.org/release/*
@@ -25,7 +25,7 @@
     spaned.setAttribute("class", `search-link-container`);
 
     let icon = document.createElement("a");
-    let mbid = document.location.href.split("/").pop()
+    let mbid = document.location.href.split("/")[4]
     icon.href = `https://harmony.pulsewidth.org.uk/release/actions?release_mbid=${mbid}`
     icon.setAttribute("class", `search-link harmony-icon`);
     icon.target="_blank";
