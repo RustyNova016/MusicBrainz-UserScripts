@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name        Beatport: MusicBrainz import links
 // @description Import Beatport releases into MusicBrainz using harmony or jump to the release
-// @version     2024.10.15.1
+// @version     2024.11.19.1
 // @author      RustyNova
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
-// @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/beatport-musicbrainz-import.user.js
-// @updateURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/beatport-musicbrainz-import.user.js
+// @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
+// @updateURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
 // @homepageURL https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @supportURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @match        https://www.beatport.com/release/*
@@ -105,7 +105,7 @@ function add_harmony_import(anchor) {
 
     harmony_button.onclick = function() {
             const currentPage = window.location.href;
-            const newURL = "https://harmony.pulsewidth.org.uk/release?gtin=&region=&musicbrainz=&deezer=&itunes=&spotify=&tidal=&beatport=&url=" + currentPage;
+            const newURL = "https://harmony.pulsewidth.org.uk/release?gtin=&category=preferred&url=" + currentPage;
             window.open(newURL, '_blank').focus();
     };
 
