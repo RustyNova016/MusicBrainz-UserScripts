@@ -4,8 +4,8 @@
 // @version     2024.11.19.1
 // @author      RustyNova
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
-// @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
-// @updateURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
+// @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/beatport-musicbrainz-import.user.js
+// @updateURL   https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/beatport-musicbrainz-import.user.js
 // @homepageURL https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @supportURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/issues
 // @match        https://www.beatport.com/release/*
