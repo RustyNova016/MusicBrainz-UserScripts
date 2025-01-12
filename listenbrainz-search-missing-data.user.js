@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Search Missing Data
 // @namespace    http://tampermonkey.net/
-// @version      2024-09-22.1
+// @version      2025-01-12.1
 // @description  Add linksto listenbrainz's missing data page
 // @author       You
-// @match        https://listenbrainz.org/settings/missing-data/*
+// @match        https://listenbrainz.org/settings/link-listens/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=listenbrainz.org
 // @namespace    https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL  https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/listenbrainz-search-missing-data.user.js
@@ -106,6 +106,7 @@ async function handle_card(card_root) {
     container.setAttribute("class", "search-link-container");
     anchor.prepend(container);
 
+    add_icon(container, `https://musicbrainz.org/taglookup/index?tag-lookup.artist=${artist}&tag-lookup.track=${title}`, "musicbrainz");
     add_icon(container, `https://listenbrainz.org/search/?search_term=${title} ${artist}&search_type=track`, "listenbrainz");
     add_icon(container, `https://open.spotify.com/search/${title} ${artist}`, "spot");
     add_icon(container, `https://www.deezer.com/search/${title} ${artist}`, "deez");
@@ -160,6 +161,9 @@ function main() {
 
         .listenbrainz-search-icon {
   background-image: url("https://www.google.com/s2/favicons?sz=64&domain=listenbrainz.org") !important;
+        }
+                .musicbrainz-search-icon {
+  background-image: url("https://www.google.com/s2/favicons?sz=64&domain=musicbrainz.org") !important;
         }
         `;
         head.appendChild(style);
