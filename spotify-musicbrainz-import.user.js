@@ -58,7 +58,7 @@
 // --- Spotify settings ----
 
 // The class of the element that the buttons should anchor on. This changes each time spotify refresh their CSS, so needs to be updated
-let anchor_class = ".yLmA5f7x65en2MdKbIhX";
+let anchor_class = ".WWMs8ddvWoRMkjWcRY2W";
 
 // --- Code ----
 
