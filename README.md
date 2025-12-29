@@ -44,6 +44,16 @@ Adds a button to quickly go see a release in harmony. Serves as an ISRC finder t
 
 ![image](https://github.com/user-attachments/assets/6cef2190-774f-433a-811c-4f684a60db7f)
 
+## Prettify MB links
+Turn a MB link toward an entity to a pretty formated link
+
+Before
+<img width="452" height="72" alt="image" src="https://github.com/user-attachments/assets/ba8bc519-2d75-4f44-8e2f-91dba5debfcd" />
+
+
+After:
+<img width="325" height="72" alt="image" src="https://github.com/user-attachments/assets/e9d253dd-82a5-4eb2-8e86-5e1630445bdd" />
+
 # Youtube
 ## Import as release
 Import youtube videos as releases easily
