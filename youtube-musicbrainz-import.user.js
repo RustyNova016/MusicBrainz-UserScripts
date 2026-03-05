@@ -39,7 +39,7 @@ var icon;
 function yt_callback(req) {
     if (req.readyState != 4)
         return;
-    var r = eval('(' + req.responseText + ')').items[0];
+    var r = JSON.parse(req.responseText).items[0];
 
     var video_id = r.id;
     var title = r.snippet.title;
@@ -79,7 +79,7 @@ function mb_callback(req) {
     if (req.readyState != 4){
         return;
     }
-    var r = eval('(' + req.responseText + ')');
+    var r = JSON.parse(req.responseText);
 
     if (r.relations !== undefined && r.relations.length > 0) {
         div.innerHTML = "<div class='holder'><a style='text-decoration: none' href='//musicbrainz.org/url/" + r.id + "'><button style='background-color:#a4a4a4;' class='search-button'>Added ✓</button></a></div>";
