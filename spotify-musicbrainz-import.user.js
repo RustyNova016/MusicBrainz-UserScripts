@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Spotify: MusicBrainz import
 // @description Import Spotify releases into MusicBrainz. fork of https://github.com/garylaski/userscripts/
-// @version     2026.08.07.1
+// @version     2026.10.11.1
 // @author      garylaski, RustyNova
 // @namespace   https://github.com/RustyNova016/MusicBrainz-UserScripts/
 // @downloadURL https://github.com/RustyNova016/MusicBrainz-UserScripts/raw/main/spotify-musicbrainz-import.user.js
